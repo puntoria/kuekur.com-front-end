@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.8.8"
+  },
+  "dependencies": {
+    "angular": "^1.5.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "bootstrap": "^3.3.6",
+    "bootstrap-sass": "^3.0.0",
+    "jquery": "^2.2.0",
+    "jquery-validation": "^1.14.0",
+    "laravel-elixir": "^4.0.0"
+  }
+}
