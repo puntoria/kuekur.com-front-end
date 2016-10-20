@@ -1,0 +1,33 @@
+home_items:
+  - title: "Prishtina <br>Tech Week"
+    date: 22 May 2016
+    image: 'event-image-1.jpg'
+    price: free
+  - title: "TEDx <br>Prishtina"
+    date: 27 May 2016
+    image: 'event-image-2.jpg'
+    price: paid
+  - title: "One Plus <br>Three Launch conference"
+    date: 05 June 2016
+    image: 'event-image-3.jpg'
+    price: free
+  - title: "Redo <br>design conference"
+    date: 16 June 2016
+    image: 'event-image-4.jpg'
+    price: paid
+  - title: "Prishtina <br>Tech Week"
+    date: 01 July 2016
+    image: 'event-image-5.jpg'
+    price: free
+  - title: "Panairi i Librit <br>Prishtina 2016"
+    date: 31 July 2016
+    image: 'event-image-6.jpg'
+    price: paid
+  - title: "Panairi i <br>Agro-kultures 16"
+    date: 05 August 2016
+    image: 'event-image-7.jpg'
+    price: free
+  - title: "Germia Hill <br>2016"
+    date: 22 January 2016
+    image: 'event-image-8.jpg'
+    price: paid

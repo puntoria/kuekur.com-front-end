@@ -1,0 +1,53 @@
+
+.events-grid {
+
+}
+
+.events-grid-column {
+	@include grid-col(6);
+	margin-bottom: rem-calc(30);
+}
+
+.events-grid-item {
+	height: rem-calc(320);
+
+	&:hover {
+
+		.events-grid-content {
+			background: transparentize(#8c7da1, 0.25);
+		}
+
+		.events-grid-item-title {
+			text-decoration: underline;
+		}
+
+	}
+}
+
+.events-grid-content {
+	@include scut-padding( rem-calc(40) );
+
+	display: block;
+	position: relative;
+	height: 100%;
+	background: transparent;
+
+	transition: all 0.3s;
+
+	* {
+		color: $white;
+	}
+}
+
+
+.events-grid-item-date {
+	position: absolute;
+	bottom: rem-calc(40);
+	font-size: rem-calc(14);
+
+	i {
+		font-size: rem-calc(24);
+		margin-right: rem-calc(15);
+		vertical-align: bottom;
+	}
+}

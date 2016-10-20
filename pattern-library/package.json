@@ -1,0 +1,58 @@
+{
+  "name": "exygy-patterns-f6",
+  "version": "1.0.0",
+  "description": "A tool for building website UI toolkits",
+  "homepage": "https://github.com/exygy-design/exygy-patterns-f6",
+  "main": "README.md",
+  "scripts": {
+    "gulp": "gulp",
+    "prestart": "npm install && bower install",
+    "build": "npm install && gulp",
+    "start": "gulp --dev",
+    "test": "npm run build"
+  },
+  "keywords": [
+    "toolkit",
+    "styleguide",
+    "framework",
+    "scaffold",
+    "patterns",
+    "library"
+  ],
+  "author": "Exygy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exygy-design/exygy-patterns-f6.git"
+  },
+  "engines": {
+    "node": ">=0.12.0",
+    "npm": ">=2.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6",
+    "babel-loader": "^6",
+    "babel-polyfill": "^6",
+    "babel-preset-es2015": "^6",
+    "babel-preset-stage-2": "^6",
+    "bower": "^1.7.2",
+    "browser-sync": "^2.7.1",
+    "del": "^2",
+    "fabricator-assemble": "^1.1.10",
+    "gulp": "^3",
+    "gulp-autoprefixer": "^3",
+    "gulp-csso": "^1",
+    "gulp-if": "^2",
+    "gulp-imagemin": "^2",
+    "gulp-rename": "^1",
+    "gulp-sass": "^2",
+    "gulp-sourcemaps": "^1",
+    "gulp-uglify": "^1",
+    "gulp-util": "^3",
+    "imports-loader": "^0.6.4",
+    "lodash": "^4.11.1",
+    "run-sequence": "^1",
+    "script-loader": "^0.6.1",
+    "webpack": "^1.12.1"
+  }
+}

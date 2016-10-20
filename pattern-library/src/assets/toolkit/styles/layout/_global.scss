@@ -1,0 +1,25 @@
+
+.content-area {
+	@include grid-row();
+	margin-top: -100px;
+	position: relative;
+	z-index: 10;
+}
+
+.content-area-sidebar {
+	@include grid-col(3);
+}
+
+.content-area-main {
+	@include grid-col(9);
+}
+
+.sidebar-small {
+	.content-area-sidebar {
+		@include grid-col(2);
+	}
+
+	.content-area-main {
+		@include grid-col(10);
+	}
+}

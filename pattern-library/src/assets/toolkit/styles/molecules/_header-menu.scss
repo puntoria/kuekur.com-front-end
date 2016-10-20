@@ -1,0 +1,22 @@
+
+.header-menu {
+	@include grid-col(7);
+	@include grid-col-off(1);
+
+	@include menu-base;
+	@include menu-direction("horizontal");
+}
+
+.header-menu-item {
+	a {
+		color: white;
+		text-transform: uppercase;
+		font-size: rem-calc(14);
+		transition: all 0.2s;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+

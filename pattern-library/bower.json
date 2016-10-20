@@ -1,0 +1,38 @@
+{
+  "name": "exygy-pattern-library",
+  "version": "0.0.0",
+  "main": "README.md",
+  "authors": [
+    "Exygy"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/exygy-design/exygy-patterns",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "foundation-sites": "^6.2.1"
+  },
+  "scripts": {
+    "gulp": "gulp",
+    "bower": "bower",
+    "prestart": "npm install",
+    "build": "npm install && gulp",
+    "start": "gulp --dev",
+    "postinstall": "bower install",
+    "test": "npm run build"
+  },
+  "resolutions": {
+    "jquery": "~2.2.0"
+  },
+  "dependencies": {
+    "Scut": "scut#^1.4.0",
+    "font-awesome": "fontawesome#^4.6.3"
+  }
+}

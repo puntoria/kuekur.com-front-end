@@ -1,0 +1,72 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+	'settings',
+	'utils/variables',
+	'utils/mixins',
+	'utils/color',
+	'utils/positioning',
+	'utils/spacing';
+
+// 2. Vendors
+@import
+	'vendor/normalize',
+	'../../vendor/Scut/dist/scut',
+	'../../vendor/foundation-sites/scss/foundation',
+	'../../vendor/font-awesome/scss/font-awesome';
+
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-menu;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+
+// 3. Base stuff
+@import 'global';
+
+// 4. Layout-related sections
+@import 'layout/global';
+
+// 5. Components
+@import 'atoms/atoms';
+@import 'molecules/molecules';
+@import 'organisms/organisms';
+
+// 6. Page-specific styles
+// @import
+	// 'pages/home';
+
+// 7. Themes
+// @import
+	// 'themes/default';

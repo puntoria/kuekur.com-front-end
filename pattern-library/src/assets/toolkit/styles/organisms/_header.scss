@@ -1,0 +1,27 @@
+.header {
+	position: relative;
+	color: white;
+}
+
+.header-top {
+	position: absolute;
+	z-index: 5;
+	top: 55px;
+	width: 100%;
+}
+
+.header-brand {
+	position: absolute;
+	left: 20px;
+}
+
+.header-user-profile {
+	position: absolute;
+	right: 20px;
+	text-align: right;
+}
+
+.header-bottom {
+	position: relative;
+	z-index: 3;
+}

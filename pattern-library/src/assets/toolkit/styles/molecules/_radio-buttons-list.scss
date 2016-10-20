@@ -1,0 +1,19 @@
+
+.radio-buttons-list {
+
+	list-style: none;
+	margin: 0px;
+
+	label {
+		color: $blue-gray;
+		font-size: rem-calc(14);
+		line-height: 1.6;
+		cursor: pointer;
+	}
+
+	input:checked + span {
+		color: $primary-color;
+		text-decoration: underline;
+	}
+
+}

@@ -1,0 +1,127 @@
+
+.fields-container {
+	border: 2px solid $border-color;
+}
+
+.fields-row {
+	@include grid-row();
+	border-bottom: 2px solid $border-color;
+
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+form {
+	> .form-submit-button {
+		margin-top: rem-calc(25);
+		margin-bottom: 0;
+	}
+}
+
+.field {
+	position: relative;
+	border-right: 2px solid $border-color;
+
+	&:last-child {
+		border-right: none;
+	}
+
+	&.one-third {
+		@include grid-col(33%, 0);
+
+		&:nth-child(3) {
+			@include grid-col(34%, 0);
+		}
+	}
+
+	&.full {
+		@include grid-col(3 of 3, 0);
+	}
+
+	input, textarea, select {
+		@include scut-padding( rem-calc(12) rem-calc(18) );
+		margin: 0px;
+		border: none;
+		outline: none;
+    	box-shadow: none;
+    	background: none;
+    	height: rem-calc(48);
+
+    	font-weight: normal;
+    	font-size: rem-calc(13);
+
+    	&:focus {
+    		border: none;
+    	}
+	}
+
+	textarea {
+		height: auto;
+	}
+
+	i {
+		@include scut-center-transform(y);
+		right: rem-calc(15);
+		position: absolute;
+		color: $primary-color;
+	}
+}
+
+.field-buttons {
+	@include grid-row();
+	float: right;
+	position: relative;
+	top: -2px;
+	border: 1px solid $border-color;
+
+	button {
+		float: right;
+		border-width: 1px !important;
+		margin: 0px;
+	}
+}
+
+.radio-field {
+	padding-left: rem-calc(18);
+}
+.radio-input {
+	@include scut-margin( rem-calc(11) rem-calc(10) rem-calc(11) rem-calc(10) );
+	display: inline-block;
+
+	input {
+		display: none;
+	}
+
+	label {
+		position: relative;
+		margin-right: 0px;
+		font-size: rem-calc(13);
+		color: $blue-gray;
+
+		&:before {
+			@include scut-center-transform(y);
+			@include scut-size( rem-calc(12) );
+			left: -18px;
+			content: '';
+			position: absolute;
+			border-radius: 50%;
+			border: 2px solid $dark-gray;
+		}
+	}
+
+	input:checked + label {
+
+		&:after {
+			@include scut-center-transform(y);
+			@include scut-size( rem-calc(4) );
+			left: -14px;
+			content: '';
+			position: absolute;
+			border-radius: 50%;
+			background: $dark-gray;
+		}
+
+	}
+
+}

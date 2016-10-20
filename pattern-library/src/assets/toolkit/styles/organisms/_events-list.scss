@@ -1,0 +1,136 @@
+
+.events-list-item {
+	height: 250px;
+	margin-bottom: rem-calc(30);
+}
+
+.events-list-item-image {
+	@include grid-col(5);
+
+	position: relative;
+	height: 100%;
+
+	a {
+		@include scut-coords( 0 0 0 0 );
+		display: block;
+		position: absolute;
+	}
+}
+
+.events-list-item-details {
+	@include grid-col(7, rem-calc(70));
+
+	overflow: hidden;
+	position: relative;
+	height: 100%;
+	background: $white;
+	padding-top: rem-calc(30);
+
+	&:before {
+		@include scut-coords( 0 0 0 0 );
+		@include scut-border(2px solid $border-color, y y y n );
+
+		content: '';
+		position: absolute;
+		z-index: 1;
+	}
+
+	> * {
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.events-list-item-price {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: 2;
+
+	&:before {
+		content:'';
+		position: absolute;
+		height: 80px;
+		width: 80px;
+		top: -40px;
+		right: -15px;
+		background: $primary-color;
+		transform: rotateZ(-22deg);
+	}
+
+	span {
+		position: relative;
+		z-index: 2;
+		color: $white;
+		text-transform: uppercase;
+		font-size: rem-calc(11);
+		top: 10px;
+		right: 15px;
+	}
+}
+
+.events-list-item-date {
+	font-size: rem-calc(11);
+	text-transform: uppercase;
+
+	i {
+		font-size: rem-calc(13);
+		margin-right: rem-calc(5);
+	}
+}
+
+.events-list-item-title {
+	font-size: rem-calc(26);
+	color: $primary-color;
+	margin-top: 5px;
+
+	br {
+		display: none;
+	}
+}
+
+.events-list-item-footer {
+	@include scut-padding( 0 rem-calc(20) 0 rem-calc(35) );
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	height: 35px;
+	border-top: 2px solid $border-color;
+}
+
+.events-list-item-tags {
+	list-style: none;
+	margin: 0px;
+	float: left;
+
+	li {
+		display: inline-block;
+		margin-right: rem-calc(12);
+		text-transform: uppercase;
+
+		a {
+			line-height: rem-calc(32);
+			color: $blue-gray;
+			font-size: rem-calc(11);
+		}
+	}
+}
+
+.events-list-item-actions {
+	float: right;
+
+	a {
+		line-height: rem-calc(32);
+		margin-left: rem-calc(25);
+		color: $blue-gray;
+		text-transform: uppercase;
+		font-size: rem-calc(11);
+
+		i {
+			margin-right: 5px;
+			color: $primary-color;
+			font-size: rem-calc(14);
+		}
+	}
+}

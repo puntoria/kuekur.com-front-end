@@ -1,0 +1,22 @@
+
+
+.images-container {
+	@include grid-row();
+	margin-bottom: rem-calc(30);
+}
+
+.images-container-column {
+	@include grid-col(1 of 2, 0);
+}
+
+.image-container {
+	position: relative;
+	display: inline-block;
+
+	&:before {
+		@include scut-coords(rem-calc(10) rem-calc(10) rem-calc(10) rem-calc(10));
+		content: '';
+		position: absolute;
+		border: 2px solid $white;
+	}
+}

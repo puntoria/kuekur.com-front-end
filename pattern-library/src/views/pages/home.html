@@ -1,0 +1,60 @@
+{{> header }}
+
+<div class="content-area sidebar-small">
+	<div class="content-area-sidebar">
+
+		<div class="sidebar-area">
+
+			<div class="sidebar-section icon-boxes vertical">
+				<div class="icon-box-column">
+					<a href="#" class="icon-box active">
+						<div class="icon-box-content">
+							<i class="fa fa-bolt"></i>
+							<div class="icon-box-label">Popular</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="icon-box-column">
+					<a href="#" class="icon-box">
+						<div class="icon-box-content">
+							<i class="fa fa-bars"></i>
+							<div class="icon-box-label">Latest</div>
+						</div>
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<div class="content-area-main">
+
+		<div class="events-grid">
+
+			{{#each home.home_items }}
+			<div class="events-grid-column">
+
+				<div class="events-grid-item" style="background-image: url({{image ../baseurl this.image}})">
+					<a href="#" class="events-grid-content">
+						<h4 class="events-grid-item-title">{{{ this.title }}}</h4>
+						<div class="events-grid-item-date">
+							<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+							{{ this.date }}
+						</div>
+					</a>
+				</div>
+
+			</div>
+			{{/each }}
+
+			<div class="column text-center">
+				<a href="#" class="button hollow wide">Load more</a>
+			</div>
+
+		</div>
+
+	</div>
+</div>
+
+{{> footer }}

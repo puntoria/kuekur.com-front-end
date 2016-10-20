@@ -1,0 +1,194 @@
+
+{{#content "hero-content" mode="replace" }}
+	<h1 class="hero-title">register or<br>sign in your account</h1>
+{{/content }}
+
+{{> header }}
+
+
+<div class="content-area">
+	<div class="content-area-sidebar">
+
+		<div class="sidebar-area" data-xtabs>
+
+			<div class="sidebar-section icon-boxes horizontal">
+
+				<div class="icon-box-column">
+					<a href="#login-tab" data-xtab class="icon-box active">
+						<div class="icon-box-content">
+							<i class="fa fa-lock"></i>
+							<div class="icon-box-label">Login</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="icon-box-column">
+					<a href="#register-tab" data-xtab class="icon-box">
+						<div class="icon-box-content">
+							<i class="fa fa-user-plus"></i>
+							<div class="icon-box-label">Register</div>
+						</div>
+					</a>
+				</div>
+
+			</div>
+
+
+
+			<div class="sidebar-section content">
+
+				<div data-xtab-content id="register-tab">
+
+					<form action="#">
+						<div class="fields-container">
+
+							<div class="fields-row">
+
+								<div class="field full">
+									<input type="text" name="name" placeholder="Name">
+									<i class="fa fa-user"></i>
+								</div>
+
+							</div>
+							<div class="fields-row">
+
+								<div class="field full">
+									<input type="text" name="lastname" placeholder="Lastname">
+									<i class="fa fa-user-secret"></i>
+								</div>
+
+							</div>
+							<div class="fields-row">
+
+								<div class="field full">
+									<input type="email" name="name" placeholder="Email">
+									<i class="fa fa-user"></i>
+								</div>
+
+							</div>
+							<div class="fields-row">
+
+								<div class="field radio-field full">
+
+									<div class="radio-input">
+										<input type="radio" name="gender" id="gender-male" value="male">
+										<label for="gender-male">Male</label>
+									</div>
+
+									<div class="radio-input">
+										<input type="radio" name="gender" id="gender-female" value="female">
+										<label for="gender-female">Female</label>
+									</div>
+
+									<i class="fa fa-venus-mars"></i>
+								</div>
+
+							</div>
+							<div class="fields-row">
+
+								<div class="field full">
+									<input type="password" name="password" placeholder="Password">
+									<i class="fa fa-unlock-alt"></i>
+								</div>
+
+							</div>
+
+						</div>
+
+						<button type="submit" class="form-submit-button button expanded">
+							REGISTER
+						</button>
+					</form>
+
+				</div>
+
+
+				<div data-xtab-content id="login-tab">
+
+					<form action="#">
+						<div class="fields-container">
+
+							<div class="fields-row">
+
+								<div class="field full">
+									<input type="email" name="name" placeholder="Email">
+									<i class="fa fa-user"></i>
+								</div>
+
+							</div>
+							<div class="fields-row">
+
+								<div class="field full">
+									<input type="password" name="password" placeholder="Password">
+									<i class="fa fa-unlock-alt"></i>
+								</div>
+
+							</div>
+
+						</div>
+
+						<button type="submit" class="form-submit-button button expanded">
+							LOGIN
+						</button>
+
+					</form>
+
+					<div class="helper-text">Recover <a href="#">password</a> or <a href="#">username</a></div>
+
+				</div>
+
+
+			</div>
+
+		</div>
+
+	</div>
+	<div class="content-area-main">
+
+		<div class="content-sections">
+			<div class="content-section">
+
+				<h4 class="page-title-heading">Frequently Asked Questions</h4>
+
+				<p>Open Source Conference Albania (OSCAL) is the international annual conference in organized to promote free open source software/hardware, open knowledge, open data, online provacy and. This week reminded me again of how refreshing attending a conference can be. As mentioned, I was at the beyond tellerrand conference and, apart from meeting new people, I mostly enjoyed the inspiration I got from listening to the great talks.</p>
+
+				<ul class="accordion faq" data-accordion>
+					<li class="accordion-item is-active" data-accordion-item>
+						<a href="#" class="accordion-title">Cili eshte qellimi i ketij sherbimi?</a>
+						<div class="accordion-content" data-tab-content>
+						Open Source Conference Albania (OSCAL) is the international annual conference in organized to promote free open source software/hardware, open knowledge, open data, online provacy and...
+						</div>
+					</li>
+					<li class="accordion-item" data-accordion-item>
+						<a href="#" class="accordion-title">Si te hap llogari?</a>
+						<div class="accordion-content" data-tab-content>
+						Open Source Conference Albania (OSCAL) is the international annual conference in organized to promote free open source software/hardware, open knowledge, open data, online provacy and...
+						</div>
+					</li>
+					<li class="accordion-item" data-accordion-item>
+						<a href="#" class="accordion-title">Si ta mbyll llogarine time?</a>
+						<div class="accordion-content" data-tab-content>
+						Open Source Conference Albania (OSCAL) is the international annual conference in organized to promote free open source software/hardware, open knowledge, open data, online provacy and...
+						</div>
+					</li>
+					<li class="accordion-item" data-accordion-item>
+						<a href="#" class="accordion-title">Si mund te krijoj nje event?</a>
+						<div class="accordion-content" data-tab-content>
+						Open Source Conference Albania (OSCAL) is the international annual conference in organized to promote free open source software/hardware, open knowledge, open data, online provacy and...
+						</div>
+					</li>
+					<li class="accordion-item" data-accordion-item>
+						<a href="#" class="accordion-title">Si ta modifikoj nje event?</a>
+						<div class="accordion-content" data-tab-content>
+						Open Source Conference Albania (OSCAL) is the international annual conference in organized to promote free open source software/hardware, open knowledge, open data, online provacy and...
+						</div>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+{{> footer }}

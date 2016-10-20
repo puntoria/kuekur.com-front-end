@@ -1,0 +1,50 @@
+
+.pagination {
+
+}
+
+.pagination-pages, .pagination-nav {
+	float: left;
+	margin: 0px;
+
+	li {
+		float: left;
+		margin: 0px;
+
+		&:last-child a {
+			border-right-width: 2px;
+		}
+		&:first-child a {
+			border-left-width: 2px;
+		}
+	}
+
+	a {
+		@include scut-size( rem-calc(50) );
+		@include scut-padding( 0 );
+		line-height: rem-calc(46);
+		border: 2px solid $border-color;
+		text-align: center;
+		display: inline-block;
+		border-right-width: 1px;
+		border-left-width: 1px;
+		color: $blue-gray;
+	}
+
+	a:hover, li.active a {
+		background: $white;
+		color: $primary-color;
+	}
+	li.active a {
+		cursor: default;
+	}
+}
+
+.pagination-nav {
+	float: right;
+
+	a {
+		@include scut-padding( n rem-calc(20) );
+		width: auto;
+	}
+}

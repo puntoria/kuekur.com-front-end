@@ -1,0 +1,24 @@
+$color-focus:           #3e94cf;
+$color-visited:         #4c2c92;
+$color-primary:        $primary-color;
+$color-white:              #fff;
+$color-gray:               #ccc;
+$color-gray-light:      #efefef;
+$color-gray-lighter:       #fff;
+$border-radius:   rem-calc(3px);
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: $color-white;
+  background-image: none, url('../images/arrow-down.svg'), url('../images/arrow-down.png');
+  background-position: right .75rem center;
+  background-repeat: no-repeat;
+  background-size: .75rem;
+}
+
+label {
+  display: block;
+}
+

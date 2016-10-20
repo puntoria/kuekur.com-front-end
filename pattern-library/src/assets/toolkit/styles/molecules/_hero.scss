@@ -1,0 +1,40 @@
+.hero {
+	height: rem-calc(490);
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+
+	&:after {
+		content: "";
+		position: absolute;
+		height: rem-calc(600);
+		width: 120%;
+		bottom: rem-calc(-600);
+		left: 0px;
+		transform-origin: 0 0;
+		transform: rotateZ(-6deg);
+		background: white;
+	}
+
+	&.big {
+		height: rem-calc(800);
+
+		&:before {
+			@include scut-coords( 0 0 0 0 );
+			content: "";
+			position: absolute;
+			background: transparentize(#130b20, 0.25);
+		}
+	}
+}
+
+.hero-content {
+	@include grid-col(12);
+	@include scut-center-transform(y);
+}
+
+.hero-title {
+	font-size: rem-calc(40);
+	text-transform: uppercase;
+	line-height: rem-calc(48);
+}

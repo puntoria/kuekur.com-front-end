@@ -1,0 +1,20 @@
+
+.content-sections {
+	border: 2px solid $border-color;
+	background: $white;
+}
+
+.content-section {
+	@include scut-padding( rem-calc(55) );
+	border-bottom: 2px solid $border-color;
+	overflow: hidden;
+
+	p {
+		margin-bottom: rem-calc(20);
+		line-height: 1.9em;
+	}
+
+	&:last-child {
+		border-bottom: none;
+	}
+}

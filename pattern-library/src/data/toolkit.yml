@@ -1,0 +1,21 @@
+bgcolors:
+  specturm:  
+    - primary
+    - secondary
+    - attention
+    - alert
+    - success
+    - warn
+button:
+  colors:
+    secondary: secondary
+    success: success
+    alert: alert
+    warning: warning
+    disabled: disabled
+  sizes:
+    Tiny: tiny
+    Small: small
+    Large: large
+    Expanded: expanded
+    

@@ -1,0 +1,28 @@
+
+.accordion {
+	margin-top: rem-calc(30);
+	border-bottom: 2px solid $border-color;
+}
+
+.accordion-title {
+	@include scut-padding(n rem-calc(0) n rem-calc(0));
+	border-top: 2px solid $border-color;
+	font-size: rem-calc(13);
+
+	&:focus, &:active {
+		outline: none;
+	}
+
+	&:before {
+		font-size: rem-calc(26);
+		font-weight: bold;
+
+		right: 0;
+    	line-height: 1rem;
+	}
+}
+
+.accordion-content {
+	@include scut-padding(0 rem-calc(0) rem-calc(25) rem-calc(0));
+	color: $blue-gray;
+}

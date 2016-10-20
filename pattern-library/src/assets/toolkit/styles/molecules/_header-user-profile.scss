@@ -1,0 +1,32 @@
+
+.header-user-profile {
+
+}
+
+.header-user-profile-menu {
+	@include menu-base;
+	@include menu-nested();
+
+	.submenu {
+		@include menu-base;
+		@include menu-direction("vertical");
+	}
+	.opens-left > .is-dropdown-submenu {
+		left: initial;
+		right: 0px;
+		top: 100%;
+	}
+}
+
+.header-user-profile-name {
+	@include scut-margin( n rem-calc(16) );
+	color: white;
+	font-size: rem-calc(14);
+}
+
+.header-user-profile-icon {
+	color: white;
+	font-size: rem-calc(18);
+	position: relative;
+	top: rem-calc(2);
+}

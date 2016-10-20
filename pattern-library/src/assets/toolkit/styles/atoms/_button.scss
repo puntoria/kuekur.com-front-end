@@ -1,0 +1,20 @@
+
+.button {
+	@include scut-padding( rem-calc(16) n );
+	font-size: rem-calc(14);
+	transition: all 0.2s;
+
+	&.hollow {
+		border: 2px solid $border-color;
+
+		&:hover {
+			border-color: $primary-color;
+			background: $primary-color;
+			color: $white;
+		}
+	}
+
+	&.wide {
+		@include scut-padding( n rem-calc(46) );
+	}
+}

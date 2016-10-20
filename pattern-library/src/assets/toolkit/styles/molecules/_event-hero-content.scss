@@ -1,0 +1,44 @@
+
+.event-hero-content {
+
+}
+
+.event-hero-content-date,
+.event-hero-content-location {
+	display: inline-block;
+	margin-right: rem-calc(25);
+	font-size: rem-calc(14);
+
+	i {
+		vertical-align: middle;
+		margin-right: rem-calc(10);
+	}
+}
+
+.event-hero-content-date {
+	i {
+		font-size: rem-calc(26);
+	}
+}
+
+.event-hero-content-location {
+	i {
+		@include scut-size( rem-calc(24) );
+		line-height: rem-calc(19);
+		text-align: center;
+		display: inline-block;
+		border: 2px solid $white;
+	}
+}
+
+.event-hero-content-title {
+	font-weight: 400;
+	margin-bottom: 0;
+	font-size: rem-calc(60);
+}
+
+.event-hero-content-subtitle {
+	position: relative;
+	top: rem-calc(-5);
+	text-transform: uppercase;
+}

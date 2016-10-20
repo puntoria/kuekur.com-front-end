@@ -1,0 +1,50 @@
+
+.footer-social {
+	a {
+		color: $blue-gray;
+		text-decoration: underline;
+	}
+}
+
+.footer-social-icons {
+	@include scut-margin( n rem-calc(-5) );
+	@include clearfix();
+	list-style: none;
+	margin-bottom: rem-calc(25);
+}
+
+.footer-social-icon {
+	@include grid-col(1 of 3, rem-calc(10));
+	position: relative;
+
+	a {
+		display: block;
+		position: relative;
+		width: 100%;
+		padding-top: 100%;
+		color: $blue-gray;
+
+		&:hover {
+			color: $white;
+			background: $primary-color;
+
+			&:before {
+				border-color: $primary-color;
+			}
+		}
+
+		&:before {
+			content: "";
+			@include scut-coords(0 0 0 0);
+			position: absolute;
+			border: 2px solid $border-color;
+			transition: all 0.2s;
+		}
+
+		i {
+			@include scut-center-transform(y);
+			width: 100%;
+			text-align: center;
+		}
+	}
+}

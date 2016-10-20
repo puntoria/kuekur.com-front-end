@@ -1,0 +1,56 @@
+<header class="header">
+	<div class="header-top">
+
+		<div class="header-brand">
+			<img src="{{image baseurl 'header-logo.png'}}" alt="">
+		</div>
+
+		<div class="header-user-profile">
+
+			<ul href="#" class="header-user-profile-menu" data-dropdown-menu>
+				<li>
+					<a href="#">
+						<img src="{{image baseurl 'user-profile.png'}}" class="header-user-profile-image">
+						<span class="header-user-profile-name">Arian Selimaj</span>
+						<span class="header-user-profile-icon fa fa-cog"></span>
+					</a>
+
+					<ul>
+						<li><a href="#">Item 1</a></li>
+						<li><a href="#">Item 2</a></li>
+						<li><a href="#">Item 3</a></li>
+					</ul>
+
+				</li>
+			</ul>
+
+		</div>
+
+		<div class="container">
+			<div class="row">
+
+				<form class="header-search">
+					<input type="text" name="q" placeholder="Search events or places" class="header-search-input">
+					<button type="submit" class="header-search-button">
+						<span class="fa fa-search"></span>
+					</button>
+				</form>
+
+				<ul class="header-menu">
+					<li class="header-menu-item">
+						<a href="#">Home</a>
+					</li>
+					<li class="header-menu-item">
+						<a href="#">Browse Events</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	<div class="header-bottom">
+
+		{{> components.hero }}
+
+	</div>
+</header>

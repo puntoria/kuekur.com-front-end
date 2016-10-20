@@ -1,0 +1,38 @@
+
+.footer {
+	@include scut-padding( rem-calc(70) n rem-calc(90) n );
+	margin-top: rem-calc(60);
+	border-top: 2px solid $border-color;
+	font-size: rem-calc(14);
+	color: $blue-gray;
+}
+
+.footer-content {
+	@include grid-col(10);
+	float: right;
+}
+
+.footer-column {
+	@include grid-col(1 of 5);
+}
+
+.footer-column-title {
+	text-transform: uppercase;
+	color: $primary-color;
+	font-size: rem-calc(14);
+	font-weight: bold;
+	margin-bottom: rem-calc(20);
+}
+
+.footer-list {
+	list-style: none;
+	margin: 0px;
+
+	li {
+		margin-bottom: rem-calc(6);
+	}
+
+	a {
+		color: $blue-gray;
+	}
+}

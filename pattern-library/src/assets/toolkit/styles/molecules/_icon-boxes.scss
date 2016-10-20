@@ -1,0 +1,79 @@
+
+.icon-boxes {
+
+	&.vertical {
+		.icon-box {
+			border-bottom: 2px solid $border-color;
+		}
+
+		.icon-box-column {
+			&:last-child{
+				.icon-box { border-bottom:none; }
+			}
+		}
+	}
+
+	&.horizontal {
+		@include clearfix();
+
+		.icon-box {
+			border-right: 2px solid $border-color;
+		}
+
+		.icon-box-column {
+			@include grid-col(6, 0);
+			&:last-child{
+				.icon-box { border-right:none; }
+			}
+		}
+
+		i {
+			font-size: rem-calc(26);
+		}
+	}
+}
+
+.icon-box {
+	position: relative;
+	background: $white;
+	text-align: center;
+	padding-top: 100%;
+	display: block;
+	color: $medium-gray;
+
+	&:focus, &:active {
+		outline: none;
+	}
+
+	&.active {
+		color: $primary-color;
+
+		&[data-xtab] {
+			&:after {
+				content: '';
+			    position: absolute;
+			    bottom: -4px;
+			    left: 0px;
+			    right: 0px;
+			    background: white;
+			    height: 4px;
+			}
+		}
+
+	}
+}
+
+.icon-box-content {
+	@include scut-center-transform(y);
+	width: 100%;
+
+	i {
+		font-size: rem-calc(34);
+		margin-bottom: rem-calc(13);
+	}
+}
+
+.icon-box-label {
+	font-size: rem-calc(14);
+	color: $primary-color;
+}

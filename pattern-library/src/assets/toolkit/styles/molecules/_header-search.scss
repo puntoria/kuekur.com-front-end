@@ -1,0 +1,30 @@
+.header-search {
+	@include grid-col(4, 0px);
+	position: relative;
+}
+
+.header-search-input {
+	color: white;
+	font-size: rem-calc(14);
+	margin-bottom: 0px;
+	padding-bottom: rem-calc(16);
+
+	&, &:focus, &:active {
+		background: transparent;
+		outline: none;
+		box-shadow: none;
+		border: none;
+		border-bottom: 2px solid rgba(255,255,255,0.1);
+	}
+
+	&:focus {
+		border-bottom: 2px solid rgba(255,255,255,0.5);
+	}
+}
+
+.header-search-button {
+	position: absolute;
+	top: rem-calc(8);
+	right: rem-calc(1);
+	font-size: rem-calc(18);
+}

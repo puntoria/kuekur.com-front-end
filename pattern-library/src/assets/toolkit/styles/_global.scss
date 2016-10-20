@@ -1,0 +1,10 @@
+
+body {
+	font-size: rem-calc($base-font-size);
+	line-height: rem-calc($base-line-height);
+	color: $blue-gray;
+}
+
+a {
+	transition: all 0.2s;
+}
