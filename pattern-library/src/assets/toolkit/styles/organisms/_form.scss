@@ -125,3 +125,91 @@ form {
 	}
 
 }
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+
+.form-fields-container {
+	@include grid-row();
+	margin-left: rem-calc(-15);
+	margin-right: rem-calc(-15);
+}
+
+.form-field {
+	@include grid-col(12);
+	margin-bottom: rem-calc(30);
+
+	&.one-third {
+		@include grid-col(4);
+	}
+}
+
+.form-field-container {
+	border: 2px solid $border-color;
+	position: relative;
+	height: rem-calc(43);
+
+	.radio-input:nth-child(1) {
+		margin-left: rem-calc(25) !important;
+	}
+
+	.radio-input {
+		margin-top: rem-calc(8) !important;
+		margin-bottom: rem-calc(8) !important;
+	}
+
+	.inputfile-label {
+		@include scut-margin( rem-calc(9) rem-calc(0) );
+		font-size: rem-calc(12);
+		color: $blue-gray;
+		margin-left: rem-calc(50);
+	}
+	.inputfile-browse {
+		@include scut-padding( rem-calc(10) rem-calc(10) );
+		position: absolute;
+		background: $primary-color;
+		color: $white;
+		right: -2px;
+		top: -2px;
+		height: calc( 100% + 4px );
+	}
+	.inputfile-image {
+		overflow: hidden;
+		position: absolute;
+		left: -2px;
+		top: -2px;
+		height: calc( 100% + 4px );
+		width: 43px;
+	}
+
+	input, textarea {
+		@include scut-padding(n rem-calc(15));
+		font-size: rem-calc(12);
+		border: none;
+		box-shadow: none;
+		margin: 0px;
+
+		&:active, &:focus {
+			border: none;
+		}
+	}
+
+	i {
+		@include scut-center-transform(y);
+		right: rem-calc(13);
+		color: $primary-color;
+	}
+}
+
+.type-text-area {
+	.form-field-container {
+		height: auto;
+	}
+}

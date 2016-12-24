@@ -1,0 +1,160 @@
+
+{{#content "hero-content" mode="replace" }}
+	<h1 class="hero-title">my<br>profile</h1>
+{{/content }}
+
+{{> header }}
+
+
+<div class="content-area" data-xtabs>
+	<div class="content-area-sidebar">
+
+		<div class="sidebar-area">
+
+			<div class="sidebar-section sidebar-profile">
+				<img src="{{image baseurl 'profile-image.jpg'}}" class="sidebar-profile-image">
+				<div class="sidebar-profile-data">
+					<span class="sidebar-profile-username">Arian Selimaj</span>
+					<span class="sidebar-profile-company">AUK Kosova</span>
+				</div>
+			</div>
+
+
+			<a class="sidebar-section button-icon active" href="#account-settings" data-xtab>
+				<i class="fa fa-cog"></i>
+				Account Settings
+			</a>
+
+			<a class="sidebar-section button-icon" href="#my-events" data-xtab>
+				<i class="fa fa-hourglass-3"></i>
+				My Events
+			</a>
+
+			<a class="sidebar-section button-icon" href="#my-favorites" data-xtab>
+				<i class="fa fa-heart"></i>
+				My Favorites
+			</a>
+
+		</div>
+
+	</div>
+	<div class="content-area-main">
+
+		<div data-xtab-content id="account-settings">
+
+			<div class="content-sections">
+				<div class="content-section">
+
+					<h4 class="page-title-heading">Account settings</h4>
+
+					<p>Open Source Conference Albania (OSCAL) is the international annual conference in organized to promote free open source software/hardware, open knowledge, open data, online provacy and. This week reminded me again of how refreshing attending a conference can be. As mentioned, I was at the beyond tellerrand conference and, apart from meeting new people, I mostly enjoyed the inspiration I got from listening to the great talks.</p>
+
+					<form action="#">
+
+						<div class="form-fields-container">
+							<div class="form-field one-third">
+								<div class="form-field-container">
+									<input type="text" name="firstname" placeholder="First Name">
+									<i class="fa fa-user"></i>
+								</div>
+							</div>
+							<div class="form-field one-third">
+								<div class="form-field-container">
+									<input type="text" name="lastname" placeholder="Last Name">
+									<i class="fa fa-user"></i>
+								</div>
+							</div>
+							<div class="form-field one-third">
+								<div class="form-field-container">
+									<input type="text" name="company_name" placeholder="Company Name">
+									<i class="fa fa-building-o"></i>
+								</div>
+							</div>
+
+							<div class="form-field one-third">
+								<div class="form-field-container">
+
+									<div class="radio-input">
+										<input type="radio" name="gender" id="gender-male" value="male">
+										<label for="gender-male">Male</label>
+									</div>
+
+									<div class="radio-input">
+										<input type="radio" name="gender" id="gender-female" value="female">
+										<label for="gender-female">Female</label>
+									</div>
+
+									<i class="fa fa-venus-mars"></i>
+								</div>
+							</div>
+							<div class="form-field one-third">
+								<div class="form-field-container">
+									<input type="text" name="phone_number" placeholder="Phone Number">
+									<i class="fa fa-phone"></i>
+								</div>
+							</div>
+							<div class="form-field one-third">
+								<div class="form-field-container">
+									<input type="text" name="website" placeholder="Website">
+									<i class="fa fa-link"></i>
+								</div>
+							</div>
+
+							<div class="form-field one-third">
+								<div class="form-field-container">
+									<div class="inputfile-image">
+										<img src="{{image baseurl 'profile-image.jpg'}}" class="sidebar-profile-image">
+									</div>
+									<input type="file" class="inputfile" id="photo" name="photo" placeholder="Photo">
+									<label for="photo" class="inputfile-label">
+										<span>Image/Logo</span>
+										<div class="inputfile-browse">Browse</div>
+									</label>
+								</div>
+							</div>
+							<div class="form-field one-third">
+								<div class="form-field-container">
+									<input type="text" name="new_password" placeholder="New Password">
+									<i class="fa fa-lock"></i>
+								</div>
+							</div>
+							<div class="form-field one-third">
+								<div class="form-field-container">
+									<input type="text" name="confirm_password" placeholder="Confirm Password">
+									<i class="fa fa-lock"></i>
+								</div>
+							</div>
+
+							<div class="form-field type-text-area">
+								<div class="form-field-container">
+									<textarea name="biography" placeholder="Your biography or company profile (512 characters max)" rows="5"></textarea>
+								</div>
+							</div>
+
+							<div class="form-field">
+								<div class="field-buttons">
+									<button type="submit" class="button hollow wide">SEND</button>
+									<button type="reset" class="button hollow wide">RESET</button>
+								</div>
+							</div>
+						</div>
+
+					</form>
+
+				</div>
+			</div>
+
+		</div>
+
+		<div data-xtab-content id="my-events">
+		Events
+		</div>
+
+		<div data-xtab-content id="my-favorites">
+		Favorites
+		</div>
+
+	</div>
+</div>
+
+{{> footer }}

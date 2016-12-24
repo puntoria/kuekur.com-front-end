@@ -45,6 +45,7 @@ var foundationTabs = require('../../vendor/foundation-sites/js/foundation.tabs.j
 require('./modules/map');
 require('./modules/dropdown');
 require('./modules/tabs');
+require('./modules/file-input');
 
 
 // Finally, you can drop test JavaScript here...
