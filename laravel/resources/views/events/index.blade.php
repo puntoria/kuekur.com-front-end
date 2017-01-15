@@ -1,148 +1,244 @@
-@extends('layouts.app')
-
+@extends('layouts.app',['title'=>'Events','main_header'=>'events'])
 @section('content')
 
-<div class="container" ng-controller="SearchController as searchCtrl" data-module="filters_page">
-    <div class="row">
-        
-        <section class="col-lg-3 sidebar">
+<div class="content-area">
+    <div class="content-area-sidebar">
 
-            <form method="GET" accept-charset="UTF-8" class="form-horizontal" ng-submit="searchCtrl.filter( true )">
-            {{-- Form::open(array('class'=>'form-horizontal',  'url' => '#', 'method'=>'GET', 'ng-submit' => 'searchCtrl.filter()')) --}}
-                
-                <h3>Search</h3>
+        <div class="sidebar-area">
 
-                <!-- Name Field -->
-                <div class="form-group">
-                    {{ Form::label('name', 'Name' , ['class'=>'col-md-4 control-label']) }}
-
-                    <div class="col-md-8">
-                        {{ Form::text('name', Request::get('name'), ['class'=>'form-control', 'ng-model' => 'searchCtrl.filters.name']) }}
-                    </div>
-                </div>
-
-                <h3>Date</h3>
-
-                <!-- Start Field -->
-                <div class="form-group">
-                    {{ Form::label('start', 'Start' , ['class'=>'col-md-4 control-label']) }}
-
-                    <div class="col-md-8">
-                        {{ Form::date('start', Request::get('start'), ['class'=>'form-control', 'ng-model' => 'searchCtrl.filters.start']) }}
-                    </div>
-                </div>
-
-                <!-- End Field -->
-                <div class="form-group">
-                    {{ Form::label('end', 'End' , ['class'=>'col-md-4 control-label']) }}
-
-                    <div class="col-md-8">
-                        {{ Form::date('end', Request::get('end'), ['class'=>'form-control', 'ng-model' => 'searchCtrl.filters.end']) }}
-                    </div>
-                </div>
-
-
-                <h3>Recurring</h3>
-
-                <!-- Recurring Field -->
-                <div class="form-group">
-                    {{ Form::label('recurring', 'Recurring' , ['class'=>'col-md-4 control-label']) }}
-
-                    <div class="col-md-8">
-                        {{ Form::select('recurring', [''=>'All', '1' => 'Recurring', '0' => 'Not Recurring'], Request::get('recurring'), ['class'=>'form-control', 'ng-model' => 'searchCtrl.filters.recurring']) }}
-                    </div>
-                </div>
-                <h3>Category</h3>
-
-                <!-- Category Field -->
-                <div class="form-group">
-                    {{ Form::label('category', 'Category' , ['class'=>'col-md-4 control-label']) }}
-
-                    <div class="col-md-8">
-                        {{ Form::select('category', $categories ,Request::get('category'), ['class'=>'form-control', 'ng-model' => 'searchCtrl.filters.category']) }}
-                    </div>
-                </div>
-
-                <h3>Location</h3>
-
-                <!-- Country Field -->
-                <div class="form-group">
-                    {{ Form::label('country', 'Country' , ['class'=>'col-md-4 control-label']) }}
-
-                    <div class="col-md-8">
-                        {{ Form::select('country', $countries ,Request::get('country'), ['class'=>'form-control', 'ng-model' => 'searchCtrl.filters.country']) }}
-                    </div>
-                </div>
-
-
-                <!-- City Field -->
-                <div class="form-group">
-                    {{ Form::label('city', 'City' , ['class'=>'col-md-4 control-label']) }}
-
-                    <div class="col-md-8">
-                        {{ Form::select('city', $cities ,Request::get('city'), ['class'=>'form-control', 'ng-model' => 'searchCtrl.filters.city']) }}
-                    </div>
-                </div>
-
-                <button type="submit" class="btn btn-primary pull-right">
-                    <i class="fa fa-btn fa-search"></i>Filter
-                </button>
-                
-            </form>
-            {{-- Form::close() --}}
-
-        </section>
-
-        <section class="thumbnails col-lg-9 np-l" role="main">
-					
-            <h3>Events</h3>
-
-            <ul class="list-group">
-                
-                <article class="col-lg-6 item"  ng-repeat="event in searchCtrl.events">
-                    
-                    <div class="image_container" ng-hide="event.status != 'ended'">
-                      <span class="ended_tag">ENDED</span>
-                    </div>
-
-                    <a href="events/@{{ event.id }}">
-                        <img ng-src="@{{ event.featured_image.url }}/thumb">
+            <div class="sidebar-section icon-boxes horizontal">
+                <div class="icon-box-column">
+                    <a href="#" class="icon-box active">
+                        <div class="icon-box-content">
+                            <i class="fa fa-bolt"></i>
+                            <div class="icon-box-label">Popular</div>
+                        </div>
                     </a>
+                </div>
 
-                    <h1><a href="events/@{{ event.id }}">@{{ event.name }}</a></h1>
-                    <h3><a href="events/@{{ event.id }}">@{{ event.category.name }}</a></h3>
-
-                    <ul class="details">
-
-                        <!-- <li><?php // echo $time_left; ?></li> -->
-
-                        <li><a href="#">@{{ event.country.name }}, @{{ event.city.name }}</a></li>
-
-                    </ul>
-                </article>
-
-                <!-- <li class="list-group-item" ng-repeat="event in searchCtrl.events">
-                    <img ng-src="@{{ event.featured_image.url }}/thumb">
-                    <a href="events/@{{ event.id }}">
-                        <h4>@{{ event.name }} - @{{ event.status }}</h4>
+                <div class="icon-box-column">
+                    <a href="#" class="icon-box">
+                        <div class="icon-box-content">
+                            <i class="fa fa-bars"></i>
+                            <div class="icon-box-label">Latest</div>
+                        </div>
                     </a>
-                    <p><strong>@{{ event.start }}</strong> - @{{ event.country.name }}, @{{ event.city.name }}</p>
-                    <p>@{{ event.category.name }}</p>
-                </li> -->
+                </div>
+            </div>
 
-            </ul>
+            <div class="sidebar-section no-border">
+                <div class="sidebar-map">
+                    <div class="google-map"></div>
+                </div>
+            </div>
 
-            <ul class="pagination" ng-hide=" searchCtrl.last_page == 1 ">
-                <li ng-class="{ disabled: searchCtrl.filters.page == 1 }">
-                    <span ng-click="searchCtrl.prevPage()">«</span>
-                </li>    
 
-                <li ng-class="{ disabled: searchCtrl.filters.page == searchCtrl.last_page }">
-                    <span ng-click="searchCtrl.nextPage()">»</span>
-                </li>
-            </ul>
+            <div class="sidebar-section button">
+                Register
+            </div>
 
-        </section>
+
+            <div class="sidebar-section content">
+                <div class="sidebar-dropdown">
+                    <a class="sidebar-dropdown-toggle">
+                        Location
+                        <i class="fa fa-angle-double-down"></i>
+                    </a>
+                    <div class="sidebar-dropdown-content">
+
+                        <ul class="radio-buttons-list">
+                            <li>
+                                <label>
+                                    <input type="radio" name="location[]"><span>Prishtine</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="location[]"><span>Peje</span>
+                                </label>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section content">
+                <div class="sidebar-dropdown">
+                    <a class="sidebar-dropdown-toggle">
+                        Category
+                        <i class="fa fa-angle-double-down"></i>
+                    </a>
+                    <div class="sidebar-dropdown-content">
+                        <ul>
+                            <li>Prishtine</li>
+                            <li>Peje</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section content">
+                <div class="sidebar-dropdown">
+                    <a class="sidebar-dropdown-toggle">
+                        Event Type
+                        <i class="fa fa-angle-double-down"></i>
+                    </a>
+                    <div class="sidebar-dropdown-content">
+                        <ul>
+                            <li>Prishtine</li>
+                            <li>Peje</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section content">
+                <div class="sidebar-dropdown">
+                    <a class="sidebar-dropdown-toggle">
+                        Date/period
+                        <i class="fa fa-angle-double-down"></i>
+                    </a>
+                    <div class="sidebar-dropdown-content">
+                        <ul>
+                            <li>Prishtine</li>
+                            <li>Peje</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section content">
+                <div class="sidebar-dropdown">
+                    <a class="sidebar-dropdown-toggle">
+                        Price
+                        <i class="fa fa-angle-double-down"></i>
+                    </a>
+                    <div class="sidebar-dropdown-content">
+                        <ul>
+                            <li>Prishtine</li>
+                            <li>Peje</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="content-area-main">
+
+        <div class="events-list">
+            @if($events)
+            @foreach($events as $event)
+            <div class="events-list-item">
+                <div class="events-list-item-image" style="background-image: url(/toolkit/images/event-image-1.jpg)">
+                    <a href="#"></a>
+                </div>
+
+                <div class="events-list-item-details">
+                    <div class="events-list-item-price"><span>free</span></div>
+
+                    <div class="events-list-item-date">
+                        <i class="fa fa-calendar-check-o" aria-hidden="true"></i>{{ event.start }}
+                    </div>
+
+                    <h4 class="events-list-item-title"><a href="events/{{ event.id }}">{{ event.name }}</a></h4>
+
+                    <div class="events-list-item-content">
+                        {{ event.description }}
+                    </div>
+
+                    <div class="events-list-item-footer">
+
+                        <ul class="events-list-item-tags">
+                            <li><a href="#">#tech</a></li>
+                            <li><a href="#">#prishtina</a></li>
+                            <li><a href="#">#22 may</a></li>
+                        </ul>
+
+                        <div class="events-list-item-actions">
+                            <a href="#">
+                                <i class="fa fa-heart"></i>
+                                Fav It
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-share"></i>
+                                Share
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            @endforeach
+            @endif
+
+            <div class="events-list-item">
+                <div class="events-list-item-image" style="background-image: url(/toolkit/images/event-image-2.jpg)">
+                    <a href="#"></a>
+                </div>
+
+                <div class="events-list-item-details">
+                    <div class="events-list-item-price"><span>paid</span></div>
+
+                    <div class="events-list-item-date">
+                        <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                        27 May 2016
+                    </div>
+
+                    <h4 class="events-list-item-title"><a href="#">TEDx <br>Prishtina</a></h4>
+
+                    <div class="events-list-item-content">
+                        Open Source Conference Albania (OSCAL) is the international annual conference in organized to promote free open source software/hardware, open knowledge, open data, online provacy and...
+                    </div>
+
+                    <div class="events-list-item-footer">
+
+                        <ul class="events-list-item-tags">
+                            <li><a href="#">#tech</a></li>
+                            <li><a href="#">#prishtina</a></li>
+                            <li><a href="#">#22 may</a></li>
+                        </ul>
+
+                        <div class="events-list-item-actions">
+                            <a href="#">
+                                <i class="fa fa-heart"></i>
+                                Fav It
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-share"></i>
+                                Share
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="pagination">
+
+                <ul class="pagination-pages">
+                    <li><a href="#">1</a></li>
+                    <li class="active"><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+
+                <ul class="pagination-nav">
+                    <li><a href="#">Prev</a></li>
+                    <li><a href="#">Next</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
     </div>
 </div>
+
 @endsection
