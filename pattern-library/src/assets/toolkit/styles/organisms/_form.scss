@@ -26,6 +26,13 @@ form {
 	&:last-child {
 		border-right: none;
 	}
+	&.medium-6 {
+		@include grid-col(25%, 0);
+
+		&:nth-child(3) {
+			@include grid-col(25%, 0);
+		}
+	}
 
 	&.one-third {
 		@include grid-col(33%, 0);
@@ -146,9 +153,12 @@ form {
 	@include grid-col(12);
 	margin-bottom: rem-calc(30);
 
-	&.one-third {
-		@include grid-col(4);
+	&.medium-6 {
+		@include grid-col(6);
 	}
+  &.one-third {
+    @include grid-col(4);
+  }
 }
 
 .form-field-container {
