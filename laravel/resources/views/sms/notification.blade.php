@@ -1,1 +1,0 @@
-Event "{{ $event->name }}" will start in {{ $hours }}
